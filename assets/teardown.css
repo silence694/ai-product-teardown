@@ -1,0 +1,178 @@
+/* ===== AI 产品拆解 · 单篇图文报告 ===== */
+:root{
+  --bg:#f5f6fb;
+  --bg2:rgba(255,255,255,.74);
+  --ink:#161a2e;
+  --muted:#5b6278;
+  --rule:rgba(59,91,255,.14);
+  --accent:#3b5bff;
+  --accent2:#7c5cf0;
+  --shadow:rgba(59,91,255,.10);
+  --radius:16px;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --display:"Segoe UI Semibold","PingFang SC Semibold",-apple-system,"Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  background-image:
+    radial-gradient(60% 40% at 10% 0%,rgba(124,92,240,.08),transparent 60%),
+    radial-gradient(50% 45% at 95% 5%,rgba(59,91,255,.07),transparent 60%),
+    radial-gradient(70% 50% at 50% 100%,rgba(59,91,255,.05),transparent 60%);
+  background-attachment:fixed;
+  color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+
+/* ---- Cover ---- */
+.cover{padding:4.2rem 0 2.8rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .9rem;border-radius:999px;
+  border:1px solid var(--rule);background:var(--bg2);backdrop-filter:blur(10px);
+  font-size:.78rem;font-weight:700;letter-spacing:.06em;color:var(--accent)}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.cover h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.15;
+  margin:1.15rem 0 .85rem;letter-spacing:-.01em}
+.cover h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .sub{font-size:1.03rem;color:var(--muted);max-width:760px}
+.cover .meta{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.cover .meta span{font-size:.8rem;color:var(--muted);border:1px solid var(--rule);
+  background:var(--bg2);backdrop-filter:blur(10px);padding:.28rem .78rem;border-radius:999px}
+.cover .meta b{color:var(--ink);font-weight:700}
+
+/* ---- Product card ---- */
+.product-card{margin:.4rem 0 2.2rem;border-radius:var(--radius);background:var(--bg2);
+  backdrop-filter:blur(10px);border:1px solid var(--rule);padding:1.4rem 1.6rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem 1.4rem;
+  box-shadow:0 8px 30px var(--shadow)}
+.pc-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:.2rem}
+.pc-value{font-size:1rem;font-weight:700;line-height:1.45}
+.pc-value.small{font-size:.88rem;font-weight:400;color:var(--muted)}
+
+/* ---- Sections ---- */
+section{padding:2rem 0}
+.section-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.35rem;font-weight:700}
+h2{font-family:var(--display);font-weight:700;font-size:1.65rem;line-height:1.28;margin-bottom:.9rem}
+h2 .num{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;margin-right:.35rem}
+h3{font-family:var(--display);font-weight:700;font-size:1.08rem;margin:1.5rem 0 .4rem;line-height:1.45}
+p{margin:.6rem 0}
+p.lead{font-size:1.02rem}
+.muted{color:var(--muted)}
+mark.key{background:none;color:var(--accent);font-weight:700}
+ul.bullet{margin:.7rem 0 .7rem 1.15rem;font-size:.95rem;color:var(--muted)}
+ul.bullet li{margin:.28rem 0}
+ul.bullet li b{color:var(--ink)}
+
+/* ---- Callout ---- */
+.callout{border-left:3px solid var(--accent2);background:var(--bg2);backdrop-filter:blur(10px);
+  border-radius:0 var(--radius) var(--radius) 0;padding:.95rem 1.2rem;margin:1.3rem 0;
+  border:1px solid var(--rule);border-left-width:3px;font-size:.95rem}
+.callout .ct-title{font-weight:700;margin-bottom:.25rem}
+.callout.blue{border-left-color:var(--accent)}
+
+/* ---- Figure ---- */
+.diagram{margin:1.5rem 0;text-align:center}
+.diagram img{max-width:100%;height:auto;border:1px solid var(--rule);border-radius:10px;
+  background:#fff;box-shadow:0 6px 22px rgba(22,26,46,.06);display:block;margin:0 auto}
+.diagram figcaption{font-size:.8rem;color:var(--muted);margin-top:.55rem;text-align:center;line-height:1.6}
+.diagram figcaption .fig-no{display:inline-block;font-family:var(--mono);font-weight:700;font-size:.7rem;
+  color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-radius:999px;padding:.02rem .48rem;margin-right:.4rem;vertical-align:1px}
+.diagram figcaption .src-tag{display:inline-block;font-size:.66rem;color:var(--accent);
+  border:1px solid var(--rule);border-radius:999px;padding:.02rem .5rem;margin-left:.35rem;font-weight:700}
+.diagram.shot-news img{filter:saturate(.92);opacity:.94}
+.figure-row{display:flex;gap:1.2rem;margin:1.5rem 0;align-items:stretch}
+.figure-row .diagram{flex:1;margin:0;min-width:0;display:flex;flex-direction:column}
+.figure-row .diagram img{width:100%;height:auto;object-fit:contain;object-position:top center}
+.figure-row .diagram figcaption{margin-top:auto;padding-top:.55rem}
+.figure-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin:1.5rem 0}
+.figure-grid .diagram{margin:0;display:flex;flex-direction:column}
+.figure-grid .diagram img{width:100%;height:auto;object-fit:contain;object-position:top center}
+.figure-grid .diagram figcaption{margin-top:auto;padding-top:.55rem}
+
+/* ---- Flow ---- */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:.55rem;margin:1.3rem 0}
+.flow .step{flex:1 1 150px;min-width:140px;background:var(--bg2);backdrop-filter:blur(10px);
+  border:1px solid var(--rule);border-radius:12px;padding:.85rem .95rem}
+.flow .step-idx{font-family:var(--mono);font-size:.62rem;color:var(--accent);font-weight:700;letter-spacing:.08em}
+.flow .step-t{font-weight:700;font-size:.9rem;margin:.18rem 0}
+.flow .step-d{font-size:.78rem;color:var(--muted);line-height:1.5}
+.flow .arrow{align-self:center;color:var(--accent);font-size:1.05rem;font-weight:700}
+
+/* ---- Feature cards ---- */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;
+  margin:1.2rem 0;list-style:none;padding:0}
+.feat-card{background:var(--bg2);backdrop-filter:blur(10px);border:1px solid var(--rule);
+  border-radius:var(--radius);padding:1.1rem 1.2rem;box-shadow:0 6px 24px var(--shadow)}
+.feat-card .fc-t{font-weight:700;font-size:.98rem;margin-bottom:.3rem;display:flex;align-items:center;gap:.5rem}
+.feat-card .fc-t .ic{min-width:26px;height:26px;padding:0 .35rem;border-radius:8px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-size:.74rem;
+  font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.feat-card p{font-size:.88rem;color:var(--muted);margin:.2rem 0 0;line-height:1.6}
+
+/* ---- Metrics ---- */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.85rem;margin:1.4rem 0}
+.metric{background:var(--bg2);backdrop-filter:blur(10px);border:1px solid var(--rule);
+  border-radius:12px;padding:.85rem 1rem;text-align:center}
+.metric .m-val{font-family:var(--display);font-weight:700;font-size:1.5rem;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
+.metric .m-label{font-size:.76rem;color:var(--muted);margin-top:.18rem;line-height:1.45}
+
+/* ---- Table ---- */
+.table-wrap{overflow-x:auto;overflow-y:auto;max-height:620px;margin:1.3rem 0;border-radius:12px;
+  border:1px solid var(--rule);background:var(--bg2);backdrop-filter:blur(10px)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:600px}
+thead th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:.7rem .95rem;border-bottom:1px solid var(--rule);
+  background:rgba(59,91,255,.04);position:sticky;top:0}
+tbody td{padding:.65rem .95rem;border-bottom:1px solid rgba(59,91,255,.08);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---- Takeaways ---- */
+.takeaway{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin:1.3rem 0}
+.takeaway .tk{background:var(--bg2);backdrop-filter:blur(10px);border:1px solid var(--rule);
+  border-radius:var(--radius);padding:1.2rem 1.3rem;box-shadow:0 6px 24px var(--shadow)}
+.takeaway .tk-n{font-family:var(--mono);font-size:.68rem;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));width:26px;height:26px;
+  border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:.5rem}
+.takeaway .tk-t{font-weight:700;margin-bottom:.25rem;font-size:.98rem}
+.takeaway .tk p{font-size:.86rem;color:var(--muted);margin:0;line-height:1.6}
+
+/* ---- Footer ---- */
+footer{border-top:1px solid var(--rule);margin-top:2.8rem;padding:2.2rem 0 3.2rem;
+  background:rgba(255,255,255,.5);backdrop-filter:blur(10px)}
+footer h2{font-size:1.25rem;margin-bottom:.9rem}
+footer .sources ol{padding-left:1.2rem;font-size:.84rem;color:var(--muted)}
+footer .sources li{margin-bottom:.45rem}
+footer .sources .src-title{color:var(--ink)}
+footer .sources .src-url{display:block;margin-top:.1rem;font-size:.8rem}
+footer .sources a{color:var(--accent);text-decoration:none;word-break:break-all}
+footer .sources a:hover{text-decoration:underline}
+footer .foot-note{font-size:.76rem;color:var(--muted);margin-top:1.2rem;
+  border-top:1px solid var(--rule);padding-top:.9rem}
+sup a{color:var(--accent);text-decoration:none;font-size:.72em;font-weight:700}
+sup a:hover{text-decoration:underline}
+
+/* ---- Responsive ---- */
+@media (max-width:768px){
+  body{font-size:15px}
+  .cover{padding:2.8rem 0 2rem}
+  h2{font-size:1.4rem}
+  .figure-row{flex-direction:column}
+  .figure-grid{grid-template-columns:1fr}
+  .product-card{padding:1.1rem}
+  table{min-width:560px}
+}
+@media print{
+  body{background:#fff}
+  .cover{padding:1rem 0}
+  section{page-break-inside:avoid}
+  .figure-row,.figure-grid{page-break-inside:avoid}
+}

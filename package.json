@@ -1,0 +1,12 @@
+{
+  "name": "ai-product-teardown",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Screenshot-driven AI product teardown reports as self-contained HTML",
+  "scripts": {
+    "shot": "node scripts/shot_capture.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.40.0"
+  }
+}
