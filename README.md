@@ -4,6 +4,10 @@
 
 > A skill that turns an AI product into a self-contained, screenshot-rich HTML teardown report. Built for product managers who need to show evidence, not opinions.
 
+![腾讯 Marvis 拆解报告首屏](assets/preview.png)
+
+上图是用本 skill 生成的《腾讯 Marvis · 把 Agent 当资产管理》首屏：一屏内完整呈现标题、一句话摘要、元信息 chips、六格产品卡、开场论证、四个指标卡与正文配图。
+
 ## 它解决什么问题
 
 市面上的产品分析大多死在两件事上：
